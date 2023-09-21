@@ -141,7 +141,7 @@ const style = StyleSheet.create({
         fontSize: 14,
     },
 
-    avatar:{
+    avatar: {
         width: 200,
         height: 200,
         borderRadius: 100,
@@ -150,12 +150,28 @@ const style = StyleSheet.create({
         borderColor: '#E4E9FA',
     },
 
-    info:{
+    info: {
         fontSize: 14,
         marginVertical: 6,
         marginHorizontal: 12,
         alignSelf: 'center',
         color: '#303030',
+    },
+
+    modal: {
+        backgroundColor: '#f9f9f9',
+        height: '80%',
+        width: '80%',
+        alignSelf: 'center',
+        borderRadius: 50,
+        paddingBottom: 24,
+        paddingHorizontal: 12,
+        marginTop: 64,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
     }
 })
 

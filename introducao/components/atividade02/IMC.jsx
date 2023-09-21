@@ -1,10 +1,12 @@
 import { View, Text, TextInput, Button, TouchableHighlight, Image } from 'react-native';
 import { useState } from 'react';
 import style from './Style';
+import Resultado from './Resultado';
 
 const IMC = ({ navigation }) => {
     const [peso, setPeso] = useState('')
     const [altura, setAltura] = useState('')
+    const [modalVisible, setModalVisible] = useState(false)
 
     return (
         <View>
@@ -24,16 +26,18 @@ const IMC = ({ navigation }) => {
             <TextInput
                 style={style.input}
                 onChangeText={text => setAltura(text)}
-                placeholder="Digite sua altura em CM"
+                placeholder="Digite sua altura em Metros"
                 value={altura}
                 keyboardType='numeric'
             />
 
-            <TouchableHighlight onPress={() => navigation.navigate('Resultado', { peso, altura })} underlayColor="none">
+            <TouchableHighlight onPress={() => setModalVisible(true)} underlayColor="none">
                 <View style={style.buttonConfirm}>
-                    <Text style={style.buttonConfirmLabel}>Calcular IMC</Text>
+                    <Text style={style.buttonConfirmLabel}>OK</Text>
                 </View>
             </TouchableHighlight>
+
+            <Resultado peso={peso} altura={altura} modalVisible={modalVisible} setModalVisible={setModalVisible}/>
         </View>
     )
 }
