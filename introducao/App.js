@@ -13,12 +13,17 @@ import { StyleSheet, View } from 'react-native';
 //estudos
 // import ComponenteFilho from './components/estudos/react_basics/01Props';
 // import State from './components/estudos/react_basics/02.State';
-import Filmes from './components/estudos/netflix-networking_e_navigate/filmes';
-import Login from './components/estudos/netflix-networking_e_navigate/login';
-import MainScreen from './components/estudos/netflix-networking_e_navigate/MainScreen';
+// import Filmes from './components/estudos/netflix-networking_e_navigate/filmes';
+// import Login from './components/estudos/netflix-networking_e_navigate/login';
+// import MainScreen from './components/estudos/netflix-networking_e_navigate/MainScreen';
+
+//prova
+import Questao01 from './components/prova/Questao01';
+import Questao02 from './components/prova/Questao02';
+import Prova from './components/prova/Mainscreen';
 
 export default function App() {
   return (
-      <MainScreen />
+      < Questao01 />
   );
 }
